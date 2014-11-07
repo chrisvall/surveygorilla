@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   #   self.password_hash = @password
   # end
 
+has_many :surveys 
   def authenticate?(password, confirm)
     password == confirm 
   end

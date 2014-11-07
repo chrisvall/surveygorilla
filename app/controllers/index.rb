@@ -1,5 +1,5 @@
 get '/' do
-  erb :index
+	erb :index
 end
 
 post '/login' do 
@@ -27,6 +27,6 @@ end
 
 
 get '/survey' do
-  erb :survey
+	erb :survey
 end
 
