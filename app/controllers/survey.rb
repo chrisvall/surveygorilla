@@ -2,7 +2,10 @@ post '/survey/new' do
 
   #do something here for creating surveys
   # erb :question
-  #@survey = Survey.create(lasjdfl;asjdf;lkj)
+  p session[:id]
+  @survey = Survey.create(title: params[:surveyname], user_id: session[:id])
+  @questions = Question.where(survey_id: @survey.id)
+
   erb :question
 
 end
