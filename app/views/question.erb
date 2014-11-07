@@ -1,11 +1,12 @@
 
 <div class="container">
   <h2>Question</h2>
-
+   <div id="display">
       <%@questions.each do |question| %>
-         <p><%=question.question%></p>
+         <h1><%=question.question%></h1>
       <% end %>
-
+   </div>
+   <div id="<%= @survey.id %>">
    <form id="question" method="post" action=<%="/survey/#{@survey.id}/question/new" %>>
       <input type="text" name="question" placeholder="Question">
    <h2>Answers</h2>
@@ -15,4 +16,5 @@
       <input type="text" name="choiceFour" placeholder="Choice Four">
       <input type="submit" value="save">
    </form>
+   </div>
 </div>
